@@ -36,7 +36,7 @@ public class Condition{
         } else if (this.millage < 125000 && this.yearsSinceProduction < 10 && this.yearsOfUsage < 7) {
             this.condition = "Good";
         } else if (this.millage < 50000 && this.yearsSinceProduction < 5 && this.yearsOfUsage < 3){
-            this.condition = "Excelent";
+            this.condition = "Excellent";
         }
 
         return this.condition;
