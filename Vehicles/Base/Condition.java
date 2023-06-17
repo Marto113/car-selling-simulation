@@ -10,7 +10,7 @@ public class Condition{
         return this.millage;
     }
 
-    public int getyearsSinceProduction(){
+    public int getYearsSinceProduction(){
         return this.yearsSinceProduction;
     }
 
@@ -22,7 +22,7 @@ public class Condition{
         this.millage = m;
     }
 
-    public void setyearsSinceProduction(int yp){
+    public void setYearsSinceProduction(int yp){
         this.yearsSinceProduction = yp;
     }
 
