@@ -1,6 +1,8 @@
 package Parts.InnerParts;
 import java.util.Random;
 
+import Vehicles.ElectricVehicle;
+
 public class Battery {
     public int batteryCapacity;
     public int range;
@@ -51,4 +53,21 @@ public class Battery {
 
         return temp;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        Battery other = (Battery) obj;
+
+        return 
+                this.batteryCapacity == other.batteryCapacity &&
+                this.batteryEfficiency == other.batteryEfficiency &&
+                this.chargingSpeed == other.batteryEfficiency &&
+                this.range == other.range;
+
+    }
+
 }

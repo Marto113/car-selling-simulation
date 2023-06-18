@@ -87,8 +87,6 @@ public class Person {
         this.preferredCondition = preferredCondition;
     }
 
-
-
     public void buy(VehicleBase vb) {
 
     }

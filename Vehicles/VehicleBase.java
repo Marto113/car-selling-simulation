@@ -7,7 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class VehicleBase {
+import Helper.Determiner;
+
+public abstract class VehicleBase {
     private String model;
     private Type type;
     private Condition condition;
@@ -68,11 +70,11 @@ public class VehicleBase {
         return type.getType();
     }
 
-    public String getCondition(){
-        return condition.getCondition();
+    public String getCarType(){
+        return "";
     }
 
-    public int getPrice(){
-        return this.price;
+    public String getCondition(){
+        return condition.getCondition();
     }
 }
