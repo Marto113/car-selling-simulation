@@ -2,6 +2,7 @@ package People;
 
 import Vehicles.Base.Condition;
 import Vehicles.Base.Type;
+import Vehicles.Base.VehicleBase;
 
 public class Person {
     private String name;
