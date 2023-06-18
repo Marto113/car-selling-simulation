@@ -22,13 +22,16 @@ public class VehicleBase {
 
     public int setPrice(){
         int temp = 0;
-        if (this.condition.getCondition() == "Scrap") {
+
+        String condition = this.condition.getCondition();
+
+        if (condition.equals("Scrap")) {
             temp = 5000;
-        } else if (this.condition.getCondition() == "Bad") {
+        } else if (condition.equals("Bad")) {
             temp = 10000;
-        } else if (this.condition.getCondition() == "Good") {
+        } else if (condition.equals("Good")) {
             temp = 25000;
-        } else if (this.condition.getCondition() == "Excellent") {
+        } else if (condition.equals("Excellent")) {
             temp = 50000;
         }
 
