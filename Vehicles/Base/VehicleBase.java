@@ -11,11 +11,28 @@ public class VehicleBase {
     private String model;
     private Type type;
     private Condition condition;
+    private int price;
 
     public VehicleBase(){
         this.model = getRandomModel();
         this.type = new Type();
         this.condition = new Condition();
+        this.price = setPrice();
+    }
+
+    public int setPrice(){
+        int temp = 0;
+        if (this.condition.getCondition() == "Scrap") {
+            temp = 5000;
+        } else if (this.condition.getCondition() == "Bad") {
+            temp = 10000;
+        } else if (this.condition.getCondition() == "Good") {
+            temp = 25000;
+        } else if (this.condition.getCondition() == "Excellent") {
+            temp = 50000;
+        }
+
+        return temp;
     }
 
     public String getRandomModel(){
@@ -53,5 +70,9 @@ public class VehicleBase {
 
     public String getCondition(){
         return condition.getCondition();
+    }
+
+    public int getPrice(){
+        return this.price;
     }
 }
