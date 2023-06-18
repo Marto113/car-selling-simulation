@@ -11,7 +11,7 @@ public class Gas extends GenericFuel{
 
     @Override
     public float getPollution() {
-        return (float)0.8 * this.efficiencyStandard;
+        return (float)0.8 / this.efficiencyStandard;
     }
 
     @Override
