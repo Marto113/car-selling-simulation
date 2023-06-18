@@ -11,16 +11,9 @@ public class CombustionVehicle extends VehicleBase {
         engine = new Engine();
     }
 
-<<<<<<< HEAD
     public String getCarType(){
         return "Combustion";
     }
-=======
-    public Engine getEngine(){
-        return this.engine;
-    }
-
->>>>>>> main
     
     @Override
     public boolean equals(Object obj) {
