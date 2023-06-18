@@ -5,6 +5,18 @@ public class Type {
     private int doors;
     private int luggageCapacity;
 
+    public Type(){
+        int[] doorsArray = {2, 4};
+        Random random = new Random();
+        int indexFromDoorArray = nextInt(doorsArray.lenght());
+        this.doors = doorsArray[indexFromDoorArray];
+
+        Random capacity = new Random();
+        this.luggageCapacity = capacity.nextInt(50 - 10 + 1) + 10;
+        
+        getType();
+    }
+
     public int getDoors(){
         return this.doors;
     }
