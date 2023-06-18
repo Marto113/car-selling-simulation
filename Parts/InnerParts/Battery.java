@@ -12,10 +12,10 @@ public class Battery {
         this.batteryCapacity = capacityRandom.nextInt(100 - 20 + 1) + 20;
 
         Random rangeRandom = new Random();
-        this.random = rangeRandom.nextInt(640 - 240 + 1) + 240;
+        this.range = rangeRandom.nextInt(640 - 240 + 1) + 240;
 
         Random chargingRandom = new Random();
-        this.chargingRandom = chargingRandom.nextInt(350 - 50 + 1) + 50;
+        this.chargingSpeed = chargingRandom.nextInt(350 - 50 + 1) + 50;
 
         Random efficiencyRandom = new Random();
         this.batteryEfficiency = efficiencyRandom.nextInt(5);
@@ -33,7 +33,7 @@ public class Battery {
         return this.chargingSpeed;
     }
 
-    public int getBatteryEfficienct(){
+    public int getBatteryEfficient(){
         return this.batteryEfficiency;
     }
 
@@ -45,6 +45,8 @@ public class Battery {
             temp = "Good";
         } else if (this.batteryCapacity >= 40 && this.range >= 150 && this.chargingSpeed >= 75 && this.batteryEfficiency >= 2){
             temp = "Bad";
+        }else{
+            temp = "Scrap";
         }
 
         return temp;
