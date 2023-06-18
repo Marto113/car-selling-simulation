@@ -45,12 +45,12 @@ public class Condition{
     }
 
     public String getCondition(){
-        if (this.millage < 250000 && this.yearsSinceProduction < 20 && this.yearsOfUsage < 15){
-            this.condition = "Bad";
+        if (this.millage < 50000 && this.yearsSinceProduction < 5 && this.yearsOfUsage < 3){
+            this.condition = "Excellent";
         } else if (this.millage < 125000 && this.yearsSinceProduction < 10 && this.yearsOfUsage < 7) {
             this.condition = "Good";
-        } else if (this.millage < 50000 && this.yearsSinceProduction < 5 && this.yearsOfUsage < 3){
-            this.condition = "Excellent";
+        } else if (this.millage < 250000 && this.yearsSinceProduction < 20 && this.yearsOfUsage < 15){
+            this.condition = "Bad";
         }
 
         return this.condition;
