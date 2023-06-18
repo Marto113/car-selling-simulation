@@ -1,11 +1,21 @@
 package People;
 
-import Vehicles.Base.VehicleBase;
+import java.lang.reflect.Type;
+import java.util.concurrent.locks.Condition;
 
 public class Person {
     private String name;
     private double budget;
-    private VehicleBase preference;
+    private Type preferredType;
+
+    private Condition preferredCondition;
+
+    public Person(String name, double budget, Type preferredType, Condition preferredCondition) {
+        this.name = name;
+        this.budget = budget;
+        this.preferredType = preferredType;
+        this.preferredCondition = preferredCondition;
+    }
 
     public String getName() {
         return name;
@@ -23,19 +33,24 @@ public class Person {
         this.budget = budget;
     }
 
-    public VehicleBase getPreference() {
-        return preference;
+    public Type getPreferredType() {
+        return preferredType;
     }
 
-    public void setPreference(VehicleBase preference) {
-        this.preference = preference;
+    public void setPreferredType(Type preferedType) {
+        this.preferredType = preferedType;
+    }
+
+    public Condition getPreferredCondition() {
+        return preferredCondition;
+    }
+
+    public void setCondition(Condition prefferredCondition) {
+        this.preferredCondition = preferredCondition;
     }
 
     public void buy(VehicleBase vb) {
-
+        //
     }
 
-    public void makeOffer(double offerPrice) {
-
-    }
 }
