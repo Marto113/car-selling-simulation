@@ -7,7 +7,7 @@ public class HybridVehicle extends VehicleBase {
     private Battery battery;
     private Engine engine;
     
-    HybridVehicle() {
+    public HybridVehicle() {
         super();
         engine = new Engine();
         battery = new Battery();
