@@ -39,7 +39,7 @@ public class Person {
                 int randomIndex = random.nextInt(names.size());
                 name = names.get(randomIndex);
             } else {
-                System.out.println("No vehicle models found in the file.");
+                System.out.println("No names found in the file.");
             }
         } catch (IOException e) {
             e.printStackTrace();
