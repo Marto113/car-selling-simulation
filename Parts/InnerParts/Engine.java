@@ -83,4 +83,19 @@ public class Engine {
     public int getFuelConsumption(){
         return (int)((this.numberOfCylinders * this.cubicCapacity) * fuel.getFuelConsumption());
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        Engine other = (Engine) obj;
+
+        return 
+                this.getFuelType().equals(other.getFuelType()) &&
+                this.cubicCapacity == other.cubicCapacity &&
+                this.numberOfCylinders == other.numberOfCylinders;
+
+    }
 }
