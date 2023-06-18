@@ -8,6 +8,8 @@ public class VehicleBase {
     private Condition condition;
     private Engine engine;
 
+    
+
     public String getModel(){
         return this.model;
     }
