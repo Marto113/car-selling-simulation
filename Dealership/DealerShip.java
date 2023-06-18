@@ -28,11 +28,13 @@ public class DealerShip {
             newVehicle = new HybridVehicle();
         } else newVehicle = new ElectricVehicle();
 
-        if (availableCars.get(newVehicle) == null) {
+        if (availableCars.containsKey(newVehicle) == false) {
             Vector<VehicleBase> cars = new Vector<VehicleBase>();
             cars.add(newVehicle);
             availableCars.put(newVehicle, cars);
-        } availableCars.get(newVehicle).add(newVehicle);
+        } else { 
+            availableCars.get(newVehicle).add(newVehicle);
+        }
     }
 
     public VehicleBase removeVehicle(VehicleBase Vehicle, int idx) {

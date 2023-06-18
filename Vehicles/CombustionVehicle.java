@@ -1,6 +1,5 @@
 package Vehicles;
 
-import Helper.Determiner;
 import Parts.InnerParts.Engine;
 
 public class CombustionVehicle extends VehicleBase {
@@ -11,17 +10,14 @@ public class CombustionVehicle extends VehicleBase {
         engine = new Engine();
     }
 
-<<<<<<< HEAD
-    public String getCarType(){
-        return "Combustion";
-    }
-=======
     public Engine getEngine(){
         return this.engine;
     }
 
->>>>>>> main
-    
+    public String getCarType(){
+        return "Combustion";
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
