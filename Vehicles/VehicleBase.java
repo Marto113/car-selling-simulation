@@ -1,4 +1,4 @@
-package Vehicles.Base;
+package Vehicles;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -36,10 +36,8 @@ public class VehicleBase {
     }
 
     public String getRandomModel(){
-        String filePath = "cars.txt";
-            
+        String filePath = "Vehicles/cars.txt";
         List<String> vehicleModels = new ArrayList<>();
-        
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -49,14 +47,13 @@ public class VehicleBase {
             if (!vehicleModels.isEmpty()) {
                 Random random = new Random();
                 int randomIndex = random.nextInt(vehicleModels.size());
-                String model = vehicleModels.get(randomIndex);
+                model = vehicleModels.get(randomIndex);
             } else {
                 System.out.println("No vehicle models found in the file.");
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-    
         return model;
     }
 
