@@ -1,5 +1,6 @@
 package Vehicles;
 
+import Helper.Determiner;
 import Parts.InnerParts.Engine;
 
 public class CombustionVehicle extends VehicleBase {

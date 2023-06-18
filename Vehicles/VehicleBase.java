@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import Helper.Determiner;
+
 public abstract class VehicleBase {
     private String model;
     private Type type;
@@ -71,4 +73,16 @@ public abstract class VehicleBase {
                this.getType().equals(other.getType());
 
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+
+        hash += Determiner.determineCondition(this.getCondition()) * 10;
+
+        hash += Determiner.determineType(getType()) * 100;
+        
+        return hash;
+    }
+
 }
