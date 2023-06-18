@@ -1,19 +1,24 @@
 package Parts.InnerParts;
 import java.util.Random;
 
+import Parts.Fuels.*;
+
 public class Engine {
     private int numberOfCylinders;
     private int cubicCapacity;
-    private String fuelType;
+    private GenericFuel fuel;
 
     public Engine(){
         int[] cylinders = {1, 2, 4, 6, 8, 10};
         Random cylinder = new Random();
         int indexFromCylinder = cylinder.nextInt(cylinders.length);
 
-        String[] fuelTypes = {"Diesel", "Petrol", "Gas"};
-        Random fuel = new Random();
-        int indexFromTypes = fuel.nextInt(fuelTypes.length);
+        Random randFuel = new Random();
+        int indexFromTypes = randFuel.nextInt(3);
+
+        float randomFuelEfficiency = randFuel.nextFloat((float)(0.2)) + (float)0.8;
+
+        setFuelType(FuelEnum.values()[indexFromTypes] , randomFuelEfficiency);
 
         Random cc = new Random();
         int num = 0;
@@ -34,7 +39,6 @@ public class Engine {
         }
 
         this.cubicCapacity = num;
-        this.fuelType = fuelTypes[indexFromTypes];
     }
 
     public int getNumberOfCylinders(){
@@ -46,7 +50,7 @@ public class Engine {
     }
 
     public String getFuelType(){
-        return this.fuelType;
+        return this.fuel.getType().getName();
     }
 
     public void setNumberOfCylinders(int c){
@@ -57,24 +61,24 @@ public class Engine {
         this.cubicCapacity = cc;
     }
 
-    public void setFuelType(String fuel){
-        this.fuelType = fuel;
+    public void setFuelType(FuelEnum fuel, float efficiency) {
+
+        switch (fuel.getName()) {
+            case "Diesel":
+                this.fuel = new Diesel(efficiency);
+                break;
+
+            case "Gas":
+                this.fuel = new Gas(efficiency);
+                break;
+
+            case "Petrol":
+                this.fuel = new Petrol(efficiency);
+                break;
+        }
     }
 
     public int getFuelConsumption(){
-        int consumption = this.numberOfCylinders * this.cubicCapacity;
-
-        if (this.fuelType == "Diesel"){
-            consumption /= 2000;
-            return consumption;
-        } else if (this.fuelType == "Petrol"){
-            consumption /= 2200;
-            return consumption;
-        } else if (this.fuelType == "Gas"){
-            consumption /= 3000;
-            return consumption;
-        }
-
-        return consumption / 2000;
+        return (int)((this.numberOfCylinders * this.cubicCapacity) * fuel.getFuelConsumption());
     }
 }
