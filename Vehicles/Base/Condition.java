@@ -51,6 +51,8 @@ public class Condition{
             this.condition = "Good";
         } else if (this.millage < 250000 && this.yearsSinceProduction < 20 && this.yearsOfUsage < 15){
             this.condition = "Bad";
+        }else{
+            this.condition = "Scrap";
         }
 
         return this.condition;
