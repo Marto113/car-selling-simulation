@@ -1,11 +1,21 @@
 package People;
 
-import Vehicles.Base.VehicleBase;
+import java.lang.reflect.Type;
+import java.util.concurrent.locks.Condition;
 
 public class Person {
     private String name;
     private double budget;
-    private VehicleBase preference;
+    private Type type;
+
+    private Condition condition;
+
+    public Person(String name, double budget, Type type, Condition condition) {
+        this.name = name;
+        this.budget = budget;
+        this.type = type;
+        this.condition = condition;
+    }
 
     public String getName() {
         return name;
@@ -23,12 +33,20 @@ public class Person {
         this.budget = budget;
     }
 
-    public VehicleBase getPreference() {
-        return preference;
+    public Type getType() {
+        return type;
     }
 
-    public void setPreference(VehicleBase preference) {
-        this.preference = preference;
+    public void setType(Type type) {
+        this.type = type;
+    }
+
+    public Condition getCondition() {
+        return condition;
+    }
+
+    public void setCondition(Condition condition) {
+        this.condition = condition;
     }
 
     public void buy(VehicleBase vb) {

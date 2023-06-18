@@ -26,7 +26,7 @@ public class Engine {
     }
 
     public void setFuelType(String fuel){
-        this.fuelType = this.fuelType;
+        this.fuelType = fuel;
     }
 
     public int getFuelConsumption(){
