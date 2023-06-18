@@ -1,4 +1,4 @@
-package Vehicles.Base;
+package Vehicles;
 
 import Parts.InnerParts.Battery;
 

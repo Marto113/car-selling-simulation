@@ -1,4 +1,4 @@
-import Vehicles.Base.VehicleBase;
+import Vehicles.VehicleBase;
 
 public class Main {
     public static void main(String[] args) throws Exception {

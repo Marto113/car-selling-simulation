@@ -1,4 +1,4 @@
-package Vehicles.Base;
+package Vehicles;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -19,7 +19,7 @@ public class VehicleBase {
     }
 
     public String getRandomModel(){
-        String filePath = "Vehicles/Base/cars.txt";
+        String filePath = "Vehicles/cars.txt";
         List<String> vehicleModels = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
