@@ -9,10 +9,15 @@ public class HybridVehicle extends VehicleBase {
     
     public HybridVehicle() {
         super();
-        engine = new Engine();
-        battery = new Battery();
+        this.engine = new Engine();
+        this.battery = new Battery();
     }
 
-    
+    public Battery getBattery(){
+        return this.battery;
+    }
 
+    public Engine getEngine(){
+        return this.engine;
+    }
 }
