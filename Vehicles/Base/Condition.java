@@ -1,4 +1,5 @@
 package Vehicle.Condition;
+import java.util.Random();
 
 public class Condition{
     private String condition;
