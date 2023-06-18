@@ -39,7 +39,7 @@ public class Battery {
 
     public String getOverallEfficiency(){
         String temp;
-        if (this.batteryCapacity >= 80 && this.range >= 500 && this.chargingSpeed >= 250 && this.batteryEfficiency > 4){
+        if (this.batteryCapacity >= 80 && this.range >= 500 && this.chargingSpeed >= 250 && this.batteryEfficiency >= 4){
             temp = "Excellent";
         } else if (this.batteryCapacity >= 60 && this.range >= 350 && this.chargingSpeed >= 125 && this.batteryEfficiency >= 3){
             temp = "Good";
