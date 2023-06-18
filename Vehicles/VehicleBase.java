@@ -85,4 +85,32 @@ public abstract class VehicleBase {
         System.out.println(getCondition());
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 0;
+
+        hash += Determiner.determineCondition(this.getCondition()) * 10;
+
+        hash += Determiner.determineType(getType()) * 100;
+
+        //System.out.println(hash);
+        
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        VehicleBase other = (VehicleBase) obj;
+
+        return 
+               this.getCarType().equals(other.getCarType()) &&
+               this.getModel().equals(other.getModel()) &&
+               this.getCondition().equals(other.getCondition()) &&
+               this.getType().equals(other.getType());
+
+    }
 }

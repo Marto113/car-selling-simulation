@@ -9,22 +9,20 @@ import Vehicles.HybridVehicle;
 import Vehicles.VehicleBase;
 
 public class DealerShip {
-    private HashMap<VehicleBase, Vector<VehicleBase>> availableCars = new HashMap<VehicleBase, Vector<VehicleBase>>();
+    private HashMap<Integer, Vector<VehicleBase>> availableCars = new HashMap<Integer, Vector<VehicleBase>>();
 
     public DealerShip() {
 
     }
 
     public void print() {
-        for (HashMap.Entry<VehicleBase, Vector<VehicleBase>> entry : availableCars.entrySet()) {
-            VehicleBase vehicleType = entry.getKey();
-            Vector<VehicleBase> vehicles = entry.getValue();
+        for (HashMap.Entry<Integer, Vector<VehicleBase>> entry : availableCars.entrySet()) {
+            //System.out.println(entry.getValue().size());
 
-            System.out.println("cat:");
-            for (VehicleBase vehicle : vehicles) {
-                vehicle.print();
+            System.out.println(entry.getKey());
+            for (VehicleBase i : entry.getValue()) {
+                i.print();
             }
-            System.out.println("\n");
 
         }
     }
@@ -42,20 +40,20 @@ public class DealerShip {
             newVehicle = new HybridVehicle();
         } else newVehicle = new ElectricVehicle();
 
-        if (availableCars.containsKey(newVehicle) == false) {
+        if (availableCars.containsKey(newVehicle.hashCode()) == false) {
             Vector<VehicleBase> cars = new Vector<VehicleBase>();
             cars.add(newVehicle);
-            availableCars.put(newVehicle, cars);
+            availableCars.put(newVehicle.hashCode(), cars);
         } else { 
-            availableCars.get(newVehicle).add(newVehicle);
+            availableCars.get(newVehicle.hashCode()).add(newVehicle);
         }
     }
 
     public VehicleBase removeVehicle(VehicleBase Vehicle, int idx) {
-        if (availableCars.containsKey(Vehicle)) {
-            if (!availableCars.get(Vehicle).isEmpty()) {
-                VehicleBase temp = availableCars.get(Vehicle).elementAt(idx);
-                availableCars.get(Vehicle).remove(idx);
+        if (availableCars.containsKey(Vehicle.hashCode())) {
+            if (!availableCars.get(Vehicle.hashCode()).isEmpty()) {
+                VehicleBase temp = availableCars.get(Vehicle.hashCode()).elementAt(idx);
+                availableCars.get(Vehicle.hashCode()).remove(idx);
                 return temp;
             } 
         } 
