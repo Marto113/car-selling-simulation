@@ -6,6 +6,19 @@ public class Condition{
     private int yearsSinceProduction;
     private int yearsOfUsage;
 
+    public Conditon(){
+        Random millageRandom = new Random();
+        this.millage = millageRandom.nextInt(250000 - 1000 + 1) + 1000;
+
+        Random yearSPRandom = new Random();
+        this.yearsSinceProduction = yearSPRandom.nextInt(20 - 3 + 1) + 3;
+
+        Random yearOURandom = new Random();
+        this.yearsOfUsage = yearOURandom.nextInt(25 - 1 + 1) + 1;
+
+        this.condition = getCondition();
+    }
+
     public int getMillage(){
         return this.millage;
     }
