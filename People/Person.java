@@ -6,15 +6,15 @@ import java.util.concurrent.locks.Condition;
 public class Person {
     private String name;
     private double budget;
-    private Type type;
+    private Type preferredType;
 
-    private Condition condition;
+    private Condition preferredCondition;
 
-    public Person(String name, double budget, Type type, Condition condition) {
+    public Person(String name, double budget, Type preferredType, Condition preferredCondition) {
         this.name = name;
         this.budget = budget;
-        this.type = type;
-        this.condition = condition;
+        this.preferredType = preferredType;
+        this.preferredCondition = preferredCondition;
     }
 
     public String getName() {
@@ -33,27 +33,24 @@ public class Person {
         this.budget = budget;
     }
 
-    public Type getType() {
-        return type;
+    public Type getPreferredType() {
+        return preferredType;
     }
 
-    public void setType(Type type) {
-        this.type = type;
+    public void setPreferredType(Type preferedType) {
+        this.preferredType = preferedType;
     }
 
-    public Condition getCondition() {
-        return condition;
+    public Condition getPreferredCondition() {
+        return preferredCondition;
     }
 
-    public void setCondition(Condition condition) {
-        this.condition = condition;
+    public void setCondition(Condition prefferredCondition) {
+        this.preferredCondition = preferredCondition;
     }
 
     public void buy(VehicleBase vb) {
 
     }
 
-    public void makeOffer(double offerPrice) {
-
-    }
 }
