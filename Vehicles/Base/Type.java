@@ -31,13 +31,15 @@ public class Type {
         }
 
         if (this.doors == 4){
-            if (this.luggageCapacity >= 20){
+            if (this.luggageCapacity >= 35){
+                this.type = "SUV";
+            } else if (this.luggageCapacity >= 30){
+                this.type = "Combi";
+            } else if (this.luggageCapacity >= 20){
                 this.type = "Sedan";
             } else if (this.luggageCapacity < 20){
                 this.type = "Hatchback";
-            } else if (this.luggageCapacity >= 35){
-                this.type = "SUV";
-            }
+            } 
         }
         
         return this.type;
