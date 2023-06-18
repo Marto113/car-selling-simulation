@@ -933,8 +933,8 @@ Porsche Taycan Turbo Cross Turismo Performance Package Plus
 Porsche 911 Carrera 4S Cabriolet Heritage Design Edition Exclusive Manufaktur
 Porsche 911 GT3 Touring MR Weissach Package GT2 RS MR
 Porsche 911 GT2 RS Weissach Package GT3 RS MR Weissach Package
-Porsche Cayenne Turbo S E-Hybrid Coupe Limited Edition
-Porsche Panamera Turbo S E-Hybrid Sport Turismo Exclusive Manufaktur
+Porsche Cayenne Turbo S  Coupe Limited Edition
+Porsche Panamera Turbo S  Sport Turismo Exclusive Manufaktur
 Porsche Macan S Sport Edition Performance Package
 Porsche Boxster 718 Spyder GT4 Package
 Porsche Taycan Turbo S Cross Turismo Performance Package Plus Exclusive Manufaktur
@@ -942,7 +942,7 @@ Porsche 911 Carrera 4 GTS Cabriolet
 Porsche 911 GT3 Cup
 Porsche 911 GT2 RS Clubsport MR
 Porsche Cayenne GTS Coupe
-Porsche Panamera 4S E-Hybrid
+Porsche Panamera 4S 
 Porsche Macan GTS Sport Edition Plus
 Porsche Boxster 718 Spyder GT4 Package MR
 Porsche Cayman GT4 RS Weissach Package MR Plus
@@ -951,7 +951,7 @@ Porsche 911 Carrera GTS Cabriolet
 Porsche 911 GT3 R
 Porsche 911 GT2 RS Clubsport MR Weissach Package
 Porsche Cayenne GTS Coupe Limited Edition
-Porsche Panamera 4 E-Hybrid
+Porsche Panamera 4 
 Porsche Macan S Sport Edition Plus Performance Package
 Porsche Boxster 718 T
 Porsche Cayman 718 T
@@ -960,7 +960,7 @@ Porsche 911 Carrera 4 GTS Cabriolet Exclusive Manufaktur
 Porsche 911 GT3 Cup MR
 Porsche 911 GT2 RS Clubsport MR Weissach Package GT3 RS
 Porsche Cayenne GTS Coupe Performance Package
-Porsche Panamera 4S E-Hybrid Sport Turismo
+Porsche Panamera 4S  Sport Turismo
 Porsche Macan GTS Sport Edition Plus Performance Package Plus
 Porsche Boxster 718 T MR
 Porsche Cayman 718 T MR
