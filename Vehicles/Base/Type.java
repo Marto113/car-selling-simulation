@@ -14,7 +14,7 @@ public class Type {
         Random capacity = new Random();
         this.luggageCapacity = capacity.nextInt(50 - 10 + 1) + 10;
         
-        getType();
+        this.type = getType();
     }
 
     public int getDoors(){
@@ -34,25 +34,29 @@ public class Type {
     }
 
     public String getType(){
+        String temp;
+
         if (this.doors == 2){
             if (this.luggageCapacity < 10){
-                this.type = "Coupe";
+                temp = "Coupe";
             } else if (this.luggageCapacity >= 10) {
-                this.type = "Truck";
+                temp = "Truck";
             }
         }
 
         if (this.doors == 4){
             if (this.luggageCapacity >= 35){
-                this.type = "SUV";
+                temp = "SUV";
             } else if (this.luggageCapacity >= 30){
-                this.type = "Combi";
+                temp = "Combi";
             } else if (this.luggageCapacity >= 20){
-                this.type = "Sedan";
+                temp = "Sedan";
             } else if (this.luggageCapacity < 20){
-                this.type = "Hatchback";
+                temp = "Hatchback";
             } 
         }
+
+        this.type = temp;
         
         return this.type;
     }
