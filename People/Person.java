@@ -1,8 +1,8 @@
 package People;
 
-import Vehicles.Base.Condition;
-import Vehicles.Base.Type;
-import Vehicles.Base.VehicleBase;
+import Vehicles.Condition;
+import Vehicles.Type;
+import Vehicles.VehicleBase;
 
 public class Person {
     private String name;

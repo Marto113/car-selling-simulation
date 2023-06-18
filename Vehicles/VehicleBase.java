@@ -1,4 +1,4 @@
-package Vehicles.Base;
+package Vehicles;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -11,18 +11,33 @@ public class VehicleBase {
     private String model;
     private Type type;
     private Condition condition;
+    private int price;
 
     public VehicleBase(){
         this.model = getRandomModel();
         this.type = new Type();
         this.condition = new Condition();
+        this.price = setPrice();
+    }
+
+    public int setPrice(){
+        int temp = 0;
+        if (this.condition.getCondition() == "Scrap") {
+            temp = 5000;
+        } else if (this.condition.getCondition() == "Bad") {
+            temp = 10000;
+        } else if (this.condition.getCondition() == "Good") {
+            temp = 25000;
+        } else if (this.condition.getCondition() == "Excellent") {
+            temp = 50000;
+        }
+
+        return temp;
     }
 
     public String getRandomModel(){
-        String filePath = "cars.txt";
-            
+        String filePath = "Vehicles/cars.txt";
         List<String> vehicleModels = new ArrayList<>();
-        
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -32,14 +47,13 @@ public class VehicleBase {
             if (!vehicleModels.isEmpty()) {
                 Random random = new Random();
                 int randomIndex = random.nextInt(vehicleModels.size());
-                String model = vehicleModels.get(randomIndex);
+                model = vehicleModels.get(randomIndex);
             } else {
                 System.out.println("No vehicle models found in the file.");
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-    
         return model;
     }
 
@@ -53,5 +67,9 @@ public class VehicleBase {
 
     public String getCondition(){
         return condition.getCondition();
+    }
+
+    public int getPrice(){
+        return this.price;
     }
 }

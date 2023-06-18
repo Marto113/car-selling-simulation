@@ -1,8 +1,8 @@
-package Vehicles.Base;
+package Vehicles;
 
 import Parts.InnerParts.Battery;
 
-public class ElectricVehicle {
+public class ElectricVehicle extends VehicleBase {
     private Battery battery;
 
     public ElectricVehicle() {
