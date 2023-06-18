@@ -20,9 +20,11 @@ public class DealerShip {
             VehicleBase vehicleType = entry.getKey();
             Vector<VehicleBase> vehicles = entry.getValue();
 
+            System.out.println("cat:");
             for (VehicleBase vehicle : vehicles) {
                 vehicle.print();
             }
+            System.out.println("\n");
 
         }
     }
