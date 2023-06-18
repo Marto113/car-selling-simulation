@@ -10,7 +10,7 @@ public class ElectricVehicle extends VehicleBase {
         battery = new Battery();
     }
 
-    public Battery getBattery(){
-        return this.battery;
+    public String getBattery(){
+        return "Electric";
     }
 }
