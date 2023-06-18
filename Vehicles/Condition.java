@@ -15,7 +15,7 @@ public class Condition{
         this.yearsSinceProduction = yearSPRandom.nextInt(20 - 3 + 1) + 3;
 
         Random yearOURandom = new Random();
-        this.yearsOfUsage = yearOURandom.nextInt(25 - 1 + 1) + 1;
+        this.yearsOfUsage = yearOURandom.nextInt(yearsSinceProduction - 1 + 1) + 1;
 
         this.condition = getCondition();
     }
@@ -45,13 +45,13 @@ public class Condition{
     }
 
     public String getCondition(){
-        if (this.millage < 50000 && this.yearsSinceProduction < 5 && this.yearsOfUsage < 3){
+        if (this.millage <= 50000 && this.yearsSinceProduction <= 5 && this.yearsOfUsage <= 3){
             this.condition = "Excellent";
-        } else if (this.millage < 125000 && this.yearsSinceProduction < 10 && this.yearsOfUsage < 7) {
+        } else if (this.millage <= 125000 && this.yearsSinceProduction <= 10 && this.yearsOfUsage <= 7) {
             this.condition = "Good";
-        } else if (this.millage < 250000 && this.yearsSinceProduction < 20 && this.yearsOfUsage < 15){
+        } else if (this.millage <= 250000 && this.yearsSinceProduction <= 20 && this.yearsOfUsage <= 15){
             this.condition = "Bad";
-        }else{
+        } else {
             this.condition = "Scrap";
         }
 
