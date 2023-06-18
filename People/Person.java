@@ -71,16 +71,16 @@ public class Person {
         this.budget = budget;
     }
 
-    public Type getPreferredType() {
-        return preferredType;
+    public String getPreferredType() {
+        return preferredType.getType();
     }
 
     public void setPreferredType(Type preferedType) {
         this.preferredType = preferedType;
     }
 
-    public Condition getPreferredCondition() {
-        return preferredCondition;
+    public String getPreferredCondition() {
+        return preferredCondition.getCondition();
     }
 
     public void setCondition(Condition prefferredCondition) {
