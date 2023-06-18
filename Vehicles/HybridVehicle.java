@@ -13,6 +13,8 @@ public class HybridVehicle extends VehicleBase {
         battery = new Battery();
     }
 
-    
+    public String getCarType(){
+        return "Hybrid";
+    }
 
 }

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class VehicleBase {
+public abstract class VehicleBase {
     private String model;
     private Type type;
     private Condition condition;
@@ -48,7 +48,27 @@ public class VehicleBase {
         return type.getType();
     }
 
+    public String getCarType(){
+        return "";
+    }
+
     public String getCondition(){
         return condition.getCondition();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        VehicleBase other = (VehicleBase) obj;
+
+        return 
+               this.getCarType().equals(other.getCarType()) &&
+               this.getModel().equals(other.getModel()) &&
+               this.getCondition().equals(other.getCondition()) &&
+               this.getType().equals(other.getType());
+
     }
 }

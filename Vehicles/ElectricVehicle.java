@@ -9,4 +9,8 @@ public class ElectricVehicle extends VehicleBase {
         super();
         battery = new Battery();
     }
+
+    public String getCarType(){
+        return "Electric";
+    }
 }

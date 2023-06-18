@@ -10,6 +10,8 @@ public class CombustionVehicle extends VehicleBase {
         engine = new Engine();
     }
 
-    
+    public String getCarType(){
+        return "Combustion";
+    }
     
 }

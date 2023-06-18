@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Random;
 import java.util.Vector;
 
 import Vehicles.*;
@@ -5,18 +7,29 @@ import People.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Vector<VehicleBase> cars = new Vector<VehicleBase>();
+        HashMap<VehicleBase, Integer> availableCars = new HashMap<VehicleBase, Integer>();
 
-        for (int i = 0; i < 10; i++) {
-            cars.add(new VehicleBase());
-            cars.add(new ElectricVehicle());
-            cars.add(new HybridVehicle());
+        Random random = new Random();
+
+        while(true) {
+            VehicleBase newVehicle;
+
+            int carType = random.nextInt(3);
+
+            if (carType == 0) {
+                newVehicle = new CombustionVehicle();
+            } else if (carType == 1) {
+                newVehicle = new HybridVehicle();
+            } else newVehicle = new ElectricVehicle();
+
+            if (availableCars.get(newVehicle) != null) {
+                availableCars.put(newVehicle, availableCars.get(newVehicle) + 1);
+            } availableCars.put(newVehicle, 1);
+            
+            
         }
 
-        for (VehicleBase i : cars) {
-            System.out.print(i.getModel() + " ");
-            System.out.print(i.getType() + " ");
-            System.out.println(i.getCondition());
-        }
+
+
     }
 }
