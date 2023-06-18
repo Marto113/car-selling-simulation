@@ -13,11 +13,31 @@ public abstract class VehicleBase {
     private String model;
     private Type type;
     private Condition condition;
+    private int price;
 
     public VehicleBase(){
         this.model = getRandomModel();
         this.type = new Type();
         this.condition = new Condition();
+        this.price = setPrice();
+    }
+
+    public int setPrice(){
+        int temp = 0;
+
+        String condition = this.condition.getCondition();
+
+        if (condition.equals("Scrap")) {
+            temp = 5000;
+        } else if (condition.equals("Bad")) {
+            temp = 10000;
+        } else if (condition.equals("Good")) {
+            temp = 25000;
+        } else if (condition.equals("Excellent")) {
+            temp = 50000;
+        }
+
+        return temp;
     }
 
     public String getRandomModel(){
@@ -57,32 +77,4 @@ public abstract class VehicleBase {
     public String getCondition(){
         return condition.getCondition();
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-
-        VehicleBase other = (VehicleBase) obj;
-
-        return 
-               this.getCarType().equals(other.getCarType()) &&
-               this.getModel().equals(other.getModel()) &&
-               this.getCondition().equals(other.getCondition()) &&
-               this.getType().equals(other.getType());
-
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-
-        hash += Determiner.determineCondition(this.getCondition()) * 10;
-
-        hash += Determiner.determineType(getType()) * 100;
-        
-        return hash;
-    }
-
 }

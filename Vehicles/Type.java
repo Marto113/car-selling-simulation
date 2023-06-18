@@ -13,7 +13,7 @@ public class Type {
         this.doors = doorsArray[indexFromDoorArray];
 
         Random capacity = new Random();
-        this.luggageCapacity = capacity.nextInt(50 - 10 + 1) + 10;
+        this.luggageCapacity = capacity.nextInt(50 - 8 + 1) + 8;
         
         this.type = getType();
     }

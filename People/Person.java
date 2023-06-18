@@ -39,7 +39,7 @@ public class Person {
                 int randomIndex = random.nextInt(names.size());
                 name = names.get(randomIndex);
             } else {
-                System.out.println("No names found in the file.");
+                System.out.println("No vehicle models found in the file.");
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -71,23 +71,21 @@ public class Person {
         this.budget = budget;
     }
 
-    public Type getPreferredType() {
-        return preferredType;
+    public String getPreferredType() {
+        return preferredType.getType();
     }
 
     public void setPreferredType(Type preferedType) {
         this.preferredType = preferedType;
     }
 
-    public Condition getPreferredCondition() {
-        return preferredCondition;
+    public String getPreferredCondition() {
+        return preferredCondition.getCondition();
     }
 
     public void setCondition(Condition prefferredCondition) {
         this.preferredCondition = preferredCondition;
     }
-
-
 
     public void buy(VehicleBase vb) {
 

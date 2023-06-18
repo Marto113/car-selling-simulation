@@ -9,32 +9,10 @@ public class HybridVehicle extends VehicleBase {
     
     public HybridVehicle() {
         super();
-        engine = new Engine();
-        battery = new Battery();
+        this.engine = new Engine();
+        this.battery = new Battery();
     }
 
-    public String getCarType(){
-        return "Hybrid";
-    }
+    
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-
-        if (this.getClass() != obj.getClass())
-            return false;
-
-        HybridVehicle other = (HybridVehicle) obj;
-
-        return 
-                this.battery.equals(other.battery) &&
-                this.engine.equals(other.engine) &&
-                this.getCarType().equals(other.getCarType()) &&
-                this.getModel().equals(other.getModel()) &&
-                this.getCondition().equals(other.getCondition()) &&
-                this.getType().equals(other.getType());
-
-    }
 }
