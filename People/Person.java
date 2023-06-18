@@ -50,7 +50,7 @@ public class Person {
     }
 
     public void buy(VehicleBase vb) {
-
+        //
     }
 
 }
