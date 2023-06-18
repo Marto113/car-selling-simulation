@@ -1,7 +1,7 @@
 package People;
 
-import java.lang.reflect.Type;
-import java.util.concurrent.locks.Condition;
+import Vehicles.Base.Condition;
+import Vehicles.Base.Type;
 
 public class Person {
     private String name;
@@ -50,7 +50,7 @@ public class Person {
     }
 
     public void buy(VehicleBase vb) {
-        //
+
     }
 
 }

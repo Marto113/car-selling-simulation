@@ -1,5 +1,5 @@
-package Vehicle.Condition;
-import java.util.Random();
+package Vehicles.Base;
+import java.util.Random;
 
 public class Condition{
     private String condition;
@@ -7,7 +7,7 @@ public class Condition{
     private int yearsSinceProduction;
     private int yearsOfUsage;
 
-    public Conditon(){
+    public Condition(){
         Random millageRandom = new Random();
         this.millage = millageRandom.nextInt(250000 - 1000 + 1) + 1000;
 

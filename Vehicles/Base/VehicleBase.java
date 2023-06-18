@@ -19,7 +19,7 @@ public class VehicleBase {
         this.condition = new Condition();
     }
 
-    String getRandomModel(){
+    public String getRandomModel(){
         String filePath = "cars.txt";
             
         List<String> vehicleModels = new ArrayList<>();
