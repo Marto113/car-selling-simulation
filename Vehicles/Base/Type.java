@@ -1,4 +1,4 @@
-package Vehicle.Type;
+package Vehicles.Base;
 import java.util.Random;
 
 public class Type {
@@ -9,7 +9,7 @@ public class Type {
     public Type(){
         int[] doorsArray = {2, 4};
         Random random = new Random();
-        int indexFromDoorArray = nextInt(doorsArray.lenght);
+        int indexFromDoorArray = nextInt(doorsArray.length);
         this.doors = doorsArray[indexFromDoorArray];
 
         Random capacity = new Random();
