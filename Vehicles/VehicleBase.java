@@ -77,4 +77,12 @@ public abstract class VehicleBase {
     public String getCondition(){
         return condition.getCondition();
     }
+
+    public void print(){
+        System.out.print(getCarType() + " ");
+        System.out.print(getModel() + " ");
+        System.out.print(getType() + " ");
+        System.out.println(getCondition());
+    }
+
 }

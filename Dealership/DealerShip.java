@@ -15,6 +15,18 @@ public class DealerShip {
 
     }
 
+    public void print() {
+        for (HashMap.Entry<VehicleBase, Vector<VehicleBase>> entry : availableCars.entrySet()) {
+            VehicleBase vehicleType = entry.getKey();
+            Vector<VehicleBase> vehicles = entry.getValue();
+
+            for (VehicleBase vehicle : vehicles) {
+                vehicle.print();
+            }
+
+        }
+    }
+
     public void makeVehicle() {
         Random random = new Random();
 
