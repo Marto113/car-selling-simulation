@@ -11,11 +11,27 @@ public class Person {
 
     private Condition preferredCondition;
 
-    public Person(String name, double budget, Type preferredType, Condition preferredCondition) {
-        this.name = name;
-        this.budget = budget;
-        this.preferredType = preferredType;
-        this.preferredCondition = preferredCondition;
+    public Person() {
+        this.name = GenerateName();
+        this.budget = GenerateBudget();
+        this.preferredType = GeneratePreferredType();
+        this.preferredCondition = GeneratePreferredCondition();
+    }
+
+    public String GenerateName(){
+        
+    }
+
+    public int GenerateBudget(){
+
+    }
+
+    public Type GeneratePreferredType(){
+
+    }
+
+    public Condition GeneratePreferredCondition(){
+
     }
 
     public String getName() {
@@ -49,6 +65,8 @@ public class Person {
     public void setCondition(Condition prefferredCondition) {
         this.preferredCondition = preferredCondition;
     }
+
+
 
     public void buy(VehicleBase vb) {
 
