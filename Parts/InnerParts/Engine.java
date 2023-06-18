@@ -9,11 +9,11 @@ public class Engine {
     public Engine(){
         int[] cylinders = {1, 2, 4, 6, 8, 10};
         Random cylinder = new Random();
-        int indexFromCylinder = cylinder.nextInt(cylinder.length());
+        int indexFromCylinder = cylinder.nextInt(cylinders.length());
 
         String[] fuelTypes = {"Diesel", "Petrol", "Gas"};
         Random fuel = new Random();
-        int indexFromTypes = fuel.nextInt(fuelTypes.lenght());
+        int indexFromTypes = fuel.nextInt(3);
 
         Random cc = new Random();
         int num = 0;
