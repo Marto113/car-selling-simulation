@@ -9,7 +9,7 @@ public class Type {
     public Type(){
         int[] doorsArray = {2, 4};
         Random random = new Random();
-        int indexFromDoorArray = nextInt(doorsArray.length);
+        int indexFromDoorArray = random.nextInt(doorsArray.length);
         this.doors = doorsArray[indexFromDoorArray];
 
         Random capacity = new Random();
@@ -35,29 +35,26 @@ public class Type {
     }
 
     public String getType(){
-        String temp;
 
         if (this.doors == 2){
             if (this.luggageCapacity < 10){
-                temp = "Coupe";
+                this.type = "Coupe";
             } else if (this.luggageCapacity >= 10) {
-                temp = "Truck";
+                this.type = "Truck";
             }
         }
 
         if (this.doors == 4){
             if (this.luggageCapacity >= 35){
-                temp = "SUV";
+                this.type = "SUV";
             } else if (this.luggageCapacity >= 30){
-                temp = "Combi";
+                this.type = "Combi";
             } else if (this.luggageCapacity >= 20){
-                temp = "Sedan";
+                this.type = "Sedan";
             } else if (this.luggageCapacity < 20){
-                temp = "Hatchback";
+                this.type = "Hatchback";
             } 
         }
-
-        this.type = temp;
         
         return this.type;
     }
