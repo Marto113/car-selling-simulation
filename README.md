@@ -13,8 +13,14 @@ Built with advanced technologies and following industry best practices, this sim
 ## Installation
 To install the application:
 1. Clone the repository:
-```CMD> git clone https://github.com/Marto113/car-selling-simulation.git```
+```
+CMD> git clone https://github.com/Marto113/car-selling-simulation.git
+```
 2. Navigate to the project directory
-```CMD> cd ./car-selling-simulation```
+```
+CMD> cd ./car-selling-simulation
+```
 3. Compile the source code:
-```CMD> java Main.java```
+```
+CMD> java Main.java
+```
