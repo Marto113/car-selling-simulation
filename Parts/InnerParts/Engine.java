@@ -11,7 +11,7 @@ public class Engine {
     public Engine(){
         Random randFuel = new Random();
         int indexFromTypes = randFuel.nextInt(3);
-        float randomFuelEfficiency = randFuel.nextFloat((float)(0.2)) + (float)0.8;
+        float randomFuelEfficiency = randFuel.nextFloat() * (float)0.2 + (float)0.8;
         setFuelType(FuelEnum.values()[indexFromTypes] , randomFuelEfficiency);
 
         int[] cylinders = {1, 2, 4, 6, 8, 10};
