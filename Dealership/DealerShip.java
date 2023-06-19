@@ -61,4 +61,19 @@ public class DealerShip {
         return null;
     }
 
+    public VehicleBase removeVehicle(VehicleBase Vehicle) {
+        if (availableCars.containsKey(Vehicle.hashCode())) {
+            if (!availableCars.get(Vehicle.hashCode()).isEmpty()) {
+                for (VehicleBase i : availableCars.get(Vehicle.hashCode())) {
+                    if (Vehicle.equals(i)) {
+                        availableCars.get(Vehicle.hashCode()).remove(i);
+                        return i;
+                    }
+                }
+            } 
+        } 
+
+        return null;
+    }
+
 }
