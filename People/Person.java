@@ -41,7 +41,6 @@ public class Person {
         }
     }
 
-
     public String generateName(){
         String filePath = "People/people.txt";
         List<String> names = new ArrayList<>();
@@ -106,6 +105,10 @@ public class Person {
 
     @Override
     public int hashCode() {
+        if ((preferredCondition == null) || (getPreferredType() == null)) {
+            return -1;
+        }
+
         int hash = 0;
 
         hash += Determiner.determineCondition(this.getPreferredCondition()) * 10;
@@ -116,7 +119,9 @@ public class Person {
     }
 
     public VehicleBase buy(DealerShip store) {
-        return store.removeVehicle(store.getAvailableCars().get(hashCode()).get(0));
+        if (store.getAvailableCars().containsKey(hashCode())) {
+            return store.removeVehicle(store.getAvailableCars().get(hashCode()).get(0));
+        } else return null;
     }
 
 }

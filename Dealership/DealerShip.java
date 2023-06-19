@@ -71,6 +71,11 @@ public class DealerShip {
                 for (VehicleBase i : availableCars.get(Vehicle.hashCode())) {
                     if (Vehicle.equals(i)) {
                         availableCars.get(Vehicle.hashCode()).remove(i);
+
+                        if (availableCars.get(Vehicle.hashCode()).size() == 0) {
+                            availableCars.remove(Vehicle.hashCode());
+                        }
+
                         return i;
                     }
                 }

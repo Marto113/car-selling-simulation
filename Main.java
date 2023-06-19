@@ -14,12 +14,15 @@ public class Main {
         while(true) {
             store.makeVehicle();
             i++;
-            if(i == 50){
-                break;
-            }
+            
+            Person person = new Person();
+
+            VehicleBase vehicle;
+
+            if ((vehicle = person.buy(store)) == null) {
+                continue ;
+            } vehicle.print();
             
         }
-        store.print();
-
     }
 }
