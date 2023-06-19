@@ -100,8 +100,8 @@ public class Person {
         return preferredCondition;
     }
 
-    public void setCondition(Condition prefferredCondition) {
-        this.preferredCondition = preferredCondition;
+    public void setCondition(Condition preferredCondition) {
+        this.preferredCondition = preferredCondition.getCondition();
     }
 
     @Override
