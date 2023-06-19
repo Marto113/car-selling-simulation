@@ -1,11 +1,12 @@
 # Car Selling Simulator
 
 The Car Selling Simulator is a comprehensive software solution designed to simulate a car dealership environment, allowing users to experience the process of buying vehicles. 
-Built with advanced technologies and following industry best practices, this simulator offers a range of features to enhance the car selling experience.
+The simulator is written in Java and the main processes run on three different threads - generating random vehicles (condition, type, engine type), generating people (preferences, budget), buy method.
+
 
 
 ## Architecture
-
+![arch](./images/architecture.png)
 
 ## Features
 
