@@ -15,6 +15,10 @@ public class DealerShip {
 
     }
 
+    public HashMap<Integer, Vector<VehicleBase>> getAvailableCars() {
+        return availableCars;
+    }
+
     public void print() {
         for (HashMap.Entry<Integer, Vector<VehicleBase>> entry : availableCars.entrySet()) {
             //System.out.println(entry.getValue().size());
